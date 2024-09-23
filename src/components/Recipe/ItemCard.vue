@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import type { Result } from '../../utils/types/Recipes'
-const prop = withDefaults(defineProps<{ recipe?: Result | null }>(), {
-  recipe: () => null
-})
+const prop = defineProps<{ recipe?: Result | null }>()
 
 const truncateDesc = (desc: string) => {
   return desc.substring(0, 100)
